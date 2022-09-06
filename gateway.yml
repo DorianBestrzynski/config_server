@@ -27,7 +27,7 @@ spring.cloud.gateway.routes:
   - id: user
     uri: lb://user
     predicates:
-      - Path=/user/**
+      - Path=/api/v1/user/**
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
