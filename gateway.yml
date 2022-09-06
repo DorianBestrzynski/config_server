@@ -23,6 +23,11 @@ spring.cloud.gateway.routes:
     uri: http://${app.eureka-server}:8761
     predicates:
       - Path=/eureka/**
+      
+  - id: user
+    uri: lb://user
+    predicates:
+      - Path=/user/**
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
