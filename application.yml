@@ -9,8 +9,18 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 5
+    
+spring.rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+spring.zipkin.sender.type: rabbit
+spring.sleuth.sampler.probability: 1.0
 
 ---
 spring.config.activate.on-profile: docker
 
 app.eureka-server: eureka
+spring.rabbitmq.host: rabbitmq
