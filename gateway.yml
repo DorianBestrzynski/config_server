@@ -43,6 +43,11 @@ spring.cloud.gateway.routes:
     uri: lb://transport
     predicates:
       - Path=/api/v1/transport/**
+      
+  - id: accommodation
+    uri: lb://accommodation
+    predicates:
+      - Path=/api/v1/accommodation/**
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
