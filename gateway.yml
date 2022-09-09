@@ -38,6 +38,11 @@ spring.cloud.gateway.routes:
     uri: lb://finance-optimizer
     predicates:
       - Path=/api/v1/finance-optimizer/**
+      
+  - id: transport
+    uri: lb://transport
+    predicates:
+      - Path=/api/v1/transport/**
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
