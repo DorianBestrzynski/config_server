@@ -48,6 +48,11 @@ spring.cloud.gateway.routes:
     uri: lb://accommodation
     predicates:
       - Path=/api/v1/accommodation/**
+      
+  - id: availability
+    uri: lb://availability
+    predicates:
+      - Path=/api/v1/availability/**
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
