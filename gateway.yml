@@ -58,6 +58,11 @@ spring.cloud.gateway.routes:
     uri: lb://trip-group
     predicates:
       - Path=/api/v1/invitation/**
+      
+  - id: user-group
+    uri: lb://trip-group
+    predicates:
+      - Path=/api/v1/user-group/**
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
