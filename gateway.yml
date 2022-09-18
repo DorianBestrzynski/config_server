@@ -59,10 +59,10 @@ spring.cloud.gateway.routes:
     predicates:
       - Path=/api/v1/invitation/**
       
-#  - id: user-group
-#    uri: lb://trip-group
-#    predicates:
-#      - Path=/api/v1/user-group/**
+  - id: user-group
+    uri: lb://trip-group
+    predicates:
+      - Path=/api/v1/user-group/**
 
   - id: day-plan
     uri: lb://day-plan
