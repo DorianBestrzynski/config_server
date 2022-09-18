@@ -6,8 +6,8 @@ server:
 #    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
 
 eureka:
-#  instance:
-#    hostname: localhost
+  instance:
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
