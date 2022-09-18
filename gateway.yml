@@ -63,6 +63,11 @@ spring.cloud.gateway.routes:
     uri: lb://trip-group
     predicates:
       - Path=/api/v1/user-group/**
+
+  - id: day-plan
+    uri: lb://day-plan
+    predicates:
+      - Path=/api/v1/day-plan/**
       
 
 management.endpoint.health.show-details: "ALWAYS"
