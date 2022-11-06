@@ -28,8 +28,6 @@ spring.cloud.gateway.routes:
     uri: lb://user
     predicates:
       - Path=/api/v1/user/**
-    filters:
-      TokenRelay=
       
   - id: trip-group
     uri: lb://trip-group
