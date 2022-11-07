@@ -68,11 +68,6 @@ spring.cloud.gateway.routes:
     uri: lb://day-plan
     predicates:
       - Path=/api/v1/day-plan/**
-  
-  - id: authorization
-    uri: lb://authentication-service
-    predicates:
-      - Path=/api/auth/**
       
 
 management.endpoint.health.show-details: "ALWAYS"
