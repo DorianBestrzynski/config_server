@@ -28,46 +28,64 @@ spring.cloud.gateway.routes:
     uri: lb://user
     predicates:
       - Path=/api/v1/user/**
+    filters:
+      - AuthenticationPrefilter
       
   - id: trip-group
     uri: lb://trip-group
     predicates:
       - Path=/api/v1/trip-group/**
+    filters:
+      - AuthenticationPrefilter
       
   - id: finance-optimizer
     uri: lb://finance-optimizer
     predicates:
       - Path=/api/v1/finance-optimizer/**
+    filters:
+      - AuthenticationPrefilter
       
   - id: transport
     uri: lb://transport
     predicates:
       - Path=/api/v1/transport/**
+    filters:
+      - AuthenticationPrefilter
       
   - id: accommodation
     uri: lb://accommodation
     predicates:
       - Path=/api/v1/accommodation/**
+    filters:
+      - AuthenticationPrefilter
       
   - id: availability
     uri: lb://availability
     predicates:
       - Path=/api/v1/availability/**
+    filters:
+      - AuthenticationPrefilter
   
   - id: invitations
     uri: lb://trip-group
     predicates:
       - Path=/api/v1/invitation/**
+    filters:
+      - AuthenticationPrefilter
       
   - id: user-group
     uri: lb://trip-group
     predicates:
       - Path=/api/v1/user-group/**
+    filters:
+      - AuthenticationPrefilter
 
   - id: day-plan
     uri: lb://day-plan
     predicates:
       - Path=/api/v1/day-plan/**
+    filters:
+      - AuthenticationPrefilter
       
 
 management.endpoint.health.show-details: "ALWAYS"
