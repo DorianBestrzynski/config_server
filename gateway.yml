@@ -87,6 +87,13 @@ spring.cloud.gateway.routes:
     filters:
       - AuthenticationPrefilter
       
+   - id: auth-service
+    uri: lb://authentication-service
+    predicates:
+      - Path=/api/auth/**
+    filters:
+      - AuthenticationPrefilter
+      
 
 management.endpoint.health.show-details: "ALWAYS"
 management.endpoints.web.exposure.include: "*"
