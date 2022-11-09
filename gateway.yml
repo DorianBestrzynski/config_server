@@ -87,7 +87,7 @@ spring.cloud.gateway.routes:
     filters:
       - AuthenticationPrefilter
       
-   - id: auth-service
+  - id: auth-service
     uri: lb://authentication-service
     predicates:
       - Path=/api/auth/**
