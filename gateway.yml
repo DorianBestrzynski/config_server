@@ -62,8 +62,7 @@ spring.cloud.gateway.routes:
   - id: availability
     uri: lb://availability
     predicates:
-      - Path=/api/v1/availability/**
-      - Path=/api/v1/shared-availability/**
+      - Path=/api/v1/availability/**,/api/v1/shared-availability/**
     filters:
       - AuthenticationPrefilter
   
