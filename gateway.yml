@@ -83,7 +83,7 @@ spring.cloud.gateway.routes:
   - id: day-plan
     uri: lb://day-plan
     predicates:
-      - Path=/api/v1/day-plan/**
+      - Path=/api/v1/day-plan/**,/api/v1/attraction/**
     filters:
       - AuthenticationPrefilter
       
