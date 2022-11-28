@@ -41,7 +41,7 @@ spring.cloud.gateway.routes:
   - id: finance-optimizer
     uri: lb://finance-optimizer
     predicates:
-      - Path=/api/v1/finance-optimizer/**
+      - Path=/api/v1/finance-optimizer/**,/api/v1/finance-request/**
     filters:
       - AuthenticationPrefilter
       
